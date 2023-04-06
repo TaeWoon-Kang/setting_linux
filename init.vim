@@ -80,3 +80,4 @@ set tagbsearch            " 태그 데이터 베이스를 이진으로 검색
 
 colorscheme tender
 
+" :CocInstall coc-python,coc-pyright,coc-clangd
