@@ -6,6 +6,11 @@ apt-get install -y libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 li
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 sudo add-apt-repository ppa:jonathonf/vim
 apt-get install -y vim
+
+git config --global user.name "TaeWoon-Kang"
+
+git config --global user.email "taewoon1374@gmail.com"
+
 cp .vimrc ~/.vim/
 vim +PluginInstall +qall
 
