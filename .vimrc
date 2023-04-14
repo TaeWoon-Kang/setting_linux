@@ -44,6 +44,11 @@ au BufReadPost *
 \ exe "norm g`\"" |
 \ endif
 
+inoremap <silent><expr> <Tab>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
+
 set encoding=utf-8         " encoding 설정
 set fileencodings=utf-8,cp949,default,latin1
 set termencoding=utf-8
