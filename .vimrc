@@ -14,6 +14,11 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'jacoborus/tender.vim'
 
 call vundle#end()
+
+call plug#begin('~/.vim/plugged')
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+call plug#end()
+
 map <Leader>f <Plug>(easymotion-bd-w)
 map <Leader>F <Plug>(easymotion-bd-jk)
 
@@ -44,10 +49,8 @@ au BufReadPost *
 \ exe "norm g`\"" |
 \ endif
 
-inoremap <silent><expr> <Tab>
-      \ coc#pum#visible() ? coc#pum#next(1) :
-      \ CheckBackspace() ? "\<Tab>" :
-      \ coc#refresh()
+"inoremap <silent><expr> <F1> coc#pum#visible() ? coc#pum#next(1) : CheckBackspace() ? "\<F1>" : coc#refresh()
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
 set encoding=utf-8         " encoding 설정
 set fileencodings=utf-8,cp949,default,latin1
