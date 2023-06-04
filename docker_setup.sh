@@ -12,7 +12,7 @@ echo 'export PATH="/usr/local/opt/llvm/bin:${PATH}"' >> ~/.bashrc
 git config --global user.name "TaeWoon-Kang"
 
 git config --global user.email "taewoon1374@gmail.com"
+curl -sL install-node.now.sh/lts | sudo bash
 
 cp .vimrc ~/.vim/
-vim +PluginInstall +qall
 
