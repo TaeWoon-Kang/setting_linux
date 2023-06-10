@@ -3,6 +3,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 cp .vimrc ~/
 vim +PluginInstall +qall
 vim +PlugInstall +qall
+vim -c 'CocInstall -sync coc-python coc-pyright coc-clangd'
 
 #After install :CocInstall coc-python,coc-pyright,coc-clangd
 
