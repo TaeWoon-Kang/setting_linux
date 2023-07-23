@@ -51,6 +51,7 @@ au BufReadPost *
 
 "inoremap <silent><expr> <F1> coc#pum#visible() ? coc#pum#next(1) : CheckBackspace() ? "\<F1>" : coc#refresh()
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+nnoremap gf <C-W>gf
 
 set encoding=utf-8         " encoding 설정
 set fileencodings=utf-8,cp949,default,latin1
