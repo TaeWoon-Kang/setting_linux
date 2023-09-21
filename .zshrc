@@ -1,18 +1,34 @@
-# added for terminal ssh color
-export TERM=xterm-256color
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-#ALIAS
-alias corelli="ssh taewoon@163.152.162.83 -p 22012"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export PATH=$HOME/anaconda3/bin:$PATH
+
+alias novak='ssh taewoon@163.152.162.75 -p 22026'
+alias corelli='ssh -X taewoon@163.152.162.83 -p 22012'
+alias caccini='ssh taewoon@163.152.162.66 -p 22000'
+alias gluck='ssh taewoon@163.152.162.67 -p 22000'
+alias falla='ssh taewoon@163.152.162.73 -p 22000'
+alias faure='ssh taewoon@163.152.162.68 -p 22000'
+alias hummel='ssh taewoon@163.152.162.75 -p 22015'
+alias frank='ssh taewoon@163.152.162.75 -p 22016'
+alias ligeti='ssh taewoon@163.152.162.74 -p 22028'
+alias glinka='ssh taewoon@163.152.162.74 -p 22029'
+
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+
+alias chrome='/usr/bin/google-chrome-stable'
+alias intellij='/opt/intelij/bin/idea.sh'
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME=agnoster
+ZSH_THEME="agnoster"
+
+#added by TAEWOONKANG
+prompt_context() {}
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -74,7 +90,7 @@ ZSH_THEME=agnoster
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -103,11 +119,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-prompt_context() {
-    if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-      prompt_segment black default "%(!.%{%F{yellow}%}.)$USER" 
-  fi 
-}
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -123,6 +134,8 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
-
-export PATH=/home/jupyter/.local/bin:$PATH
+prompt_context() {
+    if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+      prompt_segment black default "%(!.%{%F{yellow}%}.)$USER" 
+  fi 
+}
