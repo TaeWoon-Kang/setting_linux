@@ -17,3 +17,14 @@ curl -sL install-node.now.sh/lts | sudo bash
 
 cp .vimrc ~/.vim/
 
+sudo apt-get install -y language-pack-en fonts-powerline zsh​
+sudo update-locale
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+chsh -s $(which zsh)
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+#plugins=(git
+#zsh-syntax-highlighting
+#zsh-autosuggestions
+#)​
