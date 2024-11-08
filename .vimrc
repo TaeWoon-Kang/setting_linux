@@ -75,6 +75,7 @@ set showmatch            " 커서 위치 시 괄호의 끝 혹은 시작을 반�
 set laststatus=2        " 상태 라인 표시 위해(vim-airline 에서도 사용)
 set cursorline        " 현재 커서가 있는 라인을 강조
 set tagbsearch            " 태그 데이터 베이스를 이진으로 검색
+" set backspace=indent,eol,start
 
 colorscheme tender
 
