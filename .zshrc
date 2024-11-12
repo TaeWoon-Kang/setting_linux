@@ -139,3 +139,5 @@ prompt_context() {
       prompt_segment black default "%(!.%{%F{yellow}%}.)$USER" 
   fi 
 }
+# To solve g++, gcc stack overflow issues
+ulimit -s unlimited
